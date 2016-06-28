@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<h1>Add Products</h1>
+<?php echo Form::open(['url'=>'add']); ?>
+
+<?php echo Form::label('title','Title:'); ?>
+
+<?php echo Form::text('title'); ?>
+
+<?php echo Form::label('description','Description:'); ?>
+
+<?php echo Form::text('description'); ?>
+
+<?php echo Form::label('price','Price:'); ?>
+
+<?php echo Form::text('price'); ?>
+
+<?php echo Form::label('quantity','Quantity:'); ?>
+
+<?php echo Form::text('quantity'); ?>
+
+<?php echo Form::label('image','Image:'); ?>
+
+<?php echo Form::file('image'); ?>
+
+<?php echo Form::submit('Add Product'); ?>
+
+<?php echo Form::close(); ?>
+
+</body>
+</html>

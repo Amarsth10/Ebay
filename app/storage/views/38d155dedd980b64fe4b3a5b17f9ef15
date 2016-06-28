@@ -1,0 +1,9 @@
+<html>
+<head></head>
+<body>
+<h1>All Users</h1>
+<?php foreach($users as $user): ?>
+<li><?php echo link_to("/users/{$user->username}",$user->username); ?></li>
+<?php endforeach; ?>
+</body>
+</html>

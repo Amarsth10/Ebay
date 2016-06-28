@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+<h2>All Products</h2>
+               <div id="product_list" align="left">
+               <?php foreach($products as $product): ?>
+               <div><?php echo HTML::image($product->image); ?><br><?php echo 'Title: '; ?><?php echo link_to("/products/{$product->title}",$product->title); ?><br><?php echo 'Price: €',$product->price; ?>
+
+               <br><?php echo 'Quantity: ',$product->quantity; ?><br><?php echo 'Description: ',$product->description; ?> <?php echo 'Best Minimum Price: ', $product->bprice; ?>
+
+               <?php echo Form::open(array('url' => url('AddItem'))); ?>
+
+               <?php echo Form::hidden('quantity',$product->quantity); ?>
+
+               <?php echo Form::hidden('product_id', $product->id); ?>
+
+               <?php echo Form::hidden('title', $product->title); ?>
+
+               <?php echo Form::hidden('price', $product->price); ?>
+
+               <?php echo Form::hidden('bprice', $product->bprice); ?>
+
+               <?php echo Form::hidden('description', $product->description); ?>
+
+               <?php echo Form::submit('Add Item'); ?>
+
+                <?php echo Form::close(); ?></div>
+    <?php endforeach; ?>
+ </div>
+</body>
+</html>

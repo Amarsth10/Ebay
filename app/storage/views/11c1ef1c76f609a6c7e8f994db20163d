@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+<h2>Register</h2>
+<div align="center">
+<table >
+<tr>
+<?php echo Form::open(['url'=>'register']); ?>
+
+<td><?php echo Form::label('fname','First Name:'); ?></td>
+<td><?php echo Form::text('fname'); ?></td>
+<td><?php echo $errors->first('fname'); ?></td>
+<td><?php echo Form::label('lname','Last Name:'); ?></td>
+<td><?php echo Form::text('lname'); ?></td>
+<td><?php echo $errors->first('lname'); ?></td>
+</tr>
+<tr>
+<td><?php echo Form::label('address','Address:'); ?></td>
+<td><?php echo Form::text('address'); ?></td>
+<td><?php echo $errors->first('address'); ?></td>
+</tr>
+<tr>
+<td><?php echo Form::label('contact','Contact:'); ?></td>
+<td><?php echo Form::text('contact'); ?></td>
+<td><?php echo $errors->first('contact'); ?></td>
+</tr>
+<tr>
+<td><?php echo Form::label('username','Username:'); ?></td>
+<td><?php echo Form::text('username'); ?></td>
+<td><?php echo $errors->first('username'); ?></td>
+</tr>
+<tr>
+<td><?php echo Form::label('password','Password:'); ?></td>
+<td><?php echo Form::password('password'); ?></td>
+<td><?php echo $errors->first('password'); ?></td>
+</td>
+</tr>
+<td>
+<?php echo Form::submit('Create User'); ?>
+
+</td>
+<?php echo Form::close(); ?>
+
+</table>
+</div>
+</body>
+</html>
